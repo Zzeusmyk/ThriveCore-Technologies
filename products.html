@@ -17,17 +17,19 @@
   <header class="header" id="header">
     <nav class="nav container">
       <a href="index.html" class="nav-logo">
-        <svg class="logo-icon" viewBox="0 0 50 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="logo-full" viewBox="0 0 260 70" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#fbbf24"/>
-              <stop offset="50%" stop-color="#f59e0b"/>
-              <stop offset="100%" stop-color="#d97706"/>
+              <stop offset="0%" stop-color="#f28c28"/>
+              <stop offset="50%" stop-color="#e04e3e"/>
+              <stop offset="100%" stop-color="#a62d6b"/>
             </linearGradient>
           </defs>
-          <path d="M25 2 L45 22 L39 22 L25 8 L11 22 L5 22 Z" fill="url(#logoGrad)"/>
+          <path d="M130 2 L156 24 L148 24 L130 9 L112 24 L104 24 Z" fill="url(#logoGrad)" />
+          <text x="130" y="46" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="800" font-size="22" fill="#0f2341" letter-spacing="2">THRIVECORE</text>
+          <text x="218" y="38" font-family="Poppins, sans-serif" font-weight="400" font-size="7" fill="#0f2341">®</text>
+                    <text x="130" y="63" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" font-size="9" fill="#0f2341" letter-spacing="5">TECHNOLOGIES</text>
         </svg>
-        <span>Thrive<span class="highlight">Core</span></span>
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="index.html">Home</a></li>
@@ -47,8 +49,8 @@
   <section class="page-hero products-hero">
     <div class="container">
       <div class="products-hero-content">
-        <span class="section-label" style="background: rgba(245,158,11,0.15); color: var(--orange-300);">Our Product Suite</span>
-        <h1>Enterprise Software<br><span style="color: var(--orange-400); -webkit-text-fill-color: var(--orange-400);">Built for Africa</span></h1>
+        <span class="section-label" style="background: rgba(245,158,11,0.15); color: var(--orange-200);">Our Product Suite</span>
+        <h1>Enterprise Software<br><span style="color: var(--accent-orange); -webkit-text-fill-color: var(--accent-orange);">Built for Africa</span></h1>
         <p>Seven powerful, purpose-built products designed for the Nigerian market &mdash; with local compliance, offline capability, and African business needs at their core.</p>
         <div class="hero-buttons" style="justify-content: center; margin-top: 32px;">
           <a href="#products-showcase" class="btn btn-primary">Explore Products
@@ -64,7 +66,11 @@
   <section class="product-nav-bar" id="products-showcase">
     <div class="container">
       <div class="product-nav-scroll">
-        <a href="#thriveERP" class="product-nav-item active" data-product="thriveERP">
+        <a href="#thriveSMS" class="product-nav-item active" data-product="thriveSMS">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          ThriveSMS
+        </a>
+        <a href="#thriveERP" class="product-nav-item" data-product="thriveERP">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           ThriveERP
         </a>
@@ -92,11 +98,101 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
           ThriveRetail
         </a>
+        <a href="#thriveSpa" class="product-nav-item" data-product="thriveSpa">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c-4.97 0-9-2.24-9-5v-4c0-2.76 4.03-5 9-5s9 2.24 9 5v4c0 2.76-4.03 5-9 5z"/><path d="M12 8V2"/><path d="M8 4l4-2 4 2"/></svg>
+          ThriveSpa
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- ===== PRODUCT 1: ThriveERP ===== -->
+  <!-- ===== FLAGSHIP: ThriveSMS ===== -->
+  <section class="product-section" id="thriveSMS">
+    <div class="container">
+      <div class="product-showcase">
+        <div class="product-showcase-visual fade-in">
+          <div class="product-mockup product-mockup-green">
+            <div class="mockup-toolbar">
+              <span class="mockup-dot"></span>
+              <span class="mockup-dot"></span>
+              <span class="mockup-dot"></span>
+              <span class="mockup-title">ThriveSMS Dashboard</span>
+            </div>
+            <div class="mockup-body">
+              <div class="mockup-sidebar">
+                <div class="mockup-menu-item active"></div>
+                <div class="mockup-menu-item"></div>
+                <div class="mockup-menu-item"></div>
+                <div class="mockup-menu-item"></div>
+                <div class="mockup-menu-item"></div>
+              </div>
+              <div class="mockup-content">
+                <div class="mockup-profile-area">
+                  <div class="mockup-avatar"></div>
+                  <div class="mockup-profile-lines">
+                    <div class="mockup-line long"></div>
+                    <div class="mockup-line short"></div>
+                  </div>
+                </div>
+                <div class="mockup-stat-row">
+                  <div class="mockup-stat-card accent"></div>
+                  <div class="mockup-stat-card"></div>
+                  <div class="mockup-stat-card"></div>
+                </div>
+                <div class="mockup-table">
+                  <div class="mockup-table-row"></div>
+                  <div class="mockup-table-row"></div>
+                  <div class="mockup-table-row"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-badge-flag">Flagship</div>
+        </div>
+
+        <div class="product-showcase-info fade-in">
+          <div class="product-tag">School Management System</div>
+          <h2>Thrive<span class="text-orange">SMS</span></h2>
+          <p class="product-tagline">Our flagship product &mdash; Simplifying Education. Empowering Schools.</p>
+          <p>Thrive School Management System is an all-in-one digital platform designed to streamline the administrative, academic, and communication needs of modern schools &mdash; from nursery to secondary level. It brings every aspect of school operations under one roof, eliminating paperwork, reducing errors, and saving valuable time.</p>
+
+          <div class="product-features-grid">
+            <div class="product-feature-chip">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Student Management
+            </div>
+            <div class="product-feature-chip">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Academic & Timetables
+            </div>
+            <div class="product-feature-chip">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Fee & Finance
+            </div>
+            <div class="product-feature-chip">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Staff & HR
+            </div>
+            <div class="product-feature-chip">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Parent Portal & App
+            </div>
+            <div class="product-feature-chip">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Hostel & Transport
+            </div>
+          </div>
+
+          <div class="product-actions">
+            <a href="contact.html" class="btn btn-primary">Request Demo</a>
+            <a href="contact.html" class="btn btn-secondary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRODUCT 2: ThriveERP ===== -->
   <section class="product-section" id="thriveERP">
     <div class="container">
       <div class="product-showcase">
@@ -131,7 +227,6 @@
               </div>
             </div>
           </div>
-          <div class="product-badge-flag">Flagship</div>
         </div>
 
         <div class="product-showcase-info fade-in">
@@ -650,11 +745,89 @@
     </div>
   </section>
 
+  <!-- ===== PRODUCT 9: ThriveSpa ===== -->
+  <section class="product-section" id="thriveSpa">
+    <div class="container">
+      <div class="product-showcase">
+        <div class="product-showcase-visual fade-in">
+          <div class="product-mockup product-mockup-purple">
+            <div class="mockup-toolbar">
+              <span class="mockup-dot"></span>
+              <span class="mockup-dot"></span>
+              <span class="mockup-dot"></span>
+              <span class="mockup-title">ThriveSpa Tech Dashboard</span>
+            </div>
+            <div class="mockup-body">
+              <div class="mockup-sidebar">
+                <div class="mockup-menu-item active"></div>
+                <div class="mockup-menu-item"></div>
+                <div class="mockup-menu-item"></div>
+                <div class="mockup-menu-item"></div>
+              </div>
+              <div class="mockup-content">
+                <div class="mockup-stat-row">
+                  <div class="mockup-stat-card"></div>
+                  <div class="mockup-stat-card accent"></div>
+                  <div class="mockup-stat-card"></div>
+                </div>
+                <div class="mockup-chart"></div>
+                <div class="mockup-stat-row">
+                  <div class="mockup-stat-card wide accent"></div>
+                  <div class="mockup-stat-card"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="product-badge-flag">New</div>
+        </div>
+
+        <div class="product-showcase-info fade-in">
+          <div class="product-tag">Spa & Wellness Management</div>
+          <h2>Thrive<span class="text-orange">Spa</span> Tech</h2>
+          <p class="product-tagline">Powering the Business Behind the Bliss.</p>
+          <p>Thrive Spa Tech System is an intelligent, all-in-one spa management platform built to simplify operations, enhance the client experience, and grow your spa business. From front desk to back office, it digitalises and automates every aspect of daily operations.</p>
+
+          <div class="product-features-grid">
+            <div class="product-feature-chip">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Online Booking 24/7
+            </div>
+            <div class="product-feature-chip">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Client Profiles
+            </div>
+            <div class="product-feature-chip">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Therapist Scheduling
+            </div>
+            <div class="product-feature-chip">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              POS & Payments
+            </div>
+            <div class="product-feature-chip">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Loyalty & Memberships
+            </div>
+            <div class="product-feature-chip">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              Marketing Automation
+            </div>
+          </div>
+
+          <div class="product-actions">
+            <a href="contact.html" class="btn btn-primary">Request Demo</a>
+            <a href="contact.html" class="btn btn-secondary">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ===== COMPARISON / WHY OUR PRODUCTS ===== -->
   <section class="section" style="background: var(--gradient-hero); position: relative; overflow: hidden;">
     <div class="container" style="position: relative; z-index: 2;">
       <div class="section-header fade-in">
-        <span class="section-label" style="background: rgba(245,158,11,0.15); color: var(--orange-300);">Why Choose Thrive Products</span>
+        <span class="section-label" style="background: rgba(245,158,11,0.15); color: var(--orange-200);">Why Choose Thrive Products</span>
         <h2 style="color: var(--white);">Built Different. Built for You.</h2>
         <p style="color: var(--blue-200);">Every product in the Thrive suite shares core advantages that set us apart.</p>
       </div>
@@ -727,18 +900,20 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="nav-logo">
-            <svg class="logo-icon" viewBox="0 0 50 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <a href="index.html" class="nav-logo footer-logo">
+            <svg class="logo-full" viewBox="0 0 260 70" fill="none" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <linearGradient id="logoGradFoot" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" stop-color="#fbbf24"/>
-                  <stop offset="50%" stop-color="#f59e0b"/>
-                  <stop offset="100%" stop-color="#d97706"/>
+                  <stop offset="0%" stop-color="#f28c28"/>
+                  <stop offset="50%" stop-color="#e04e3e"/>
+                  <stop offset="100%" stop-color="#a62d6b"/>
                 </linearGradient>
               </defs>
-              <path d="M25 2 L45 22 L39 22 L25 8 L11 22 L5 22 Z" fill="url(#logoGradFoot)"/>
-            </svg>
-            <span style="color:#fff;">Thrive<span class="highlight">Core</span></span>
+              <path d="M130 2 L156 24 L148 24 L130 9 L112 24 L104 24 Z" fill="url(#logoGradFoot)" />
+              <text x="130" y="46" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="800" font-size="22" fill="#ffffff" letter-spacing="2">THRIVECORE</text>
+              <text x="218" y="38" font-family="Poppins, sans-serif" font-weight="400" font-size="7" fill="#ffffff">®</text>
+                            <text x="130" y="63" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" font-size="9" fill="rgba(255,255,255,0.6)" letter-spacing="5">TECHNOLOGIES</text>
+                          </svg>
           </a>
           <p>Empowering African businesses with innovative, reliable, and secure technology solutions since 2015.</p>
           <div class="footer-social">
@@ -759,12 +934,15 @@
         <div class="footer-col">
           <h4>Products</h4>
           <ul>
+            <li><a href="#thriveSMS">ThriveSMS</a></li>
             <li><a href="#thriveERP">ThriveERP</a></li>
             <li><a href="#thriveHR">ThriveHR</a></li>
             <li><a href="#thrivePOS">ThrivePOS</a></li>
             <li><a href="#thriveFinance">ThriveFinance</a></li>
             <li><a href="#thriveHealth">ThriveHealth</a></li>
+            <li><a href="#thriveLearn">ThriveLearn</a></li>
             <li><a href="#thriveRetail">ThriveRetail</a></li>
+            <li><a href="#thriveSpa">ThriveSpa</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -779,8 +957,8 @@
         <div class="footer-col">
           <h4>Contact</h4>
           <ul>
-            <li>Lagos, Nigeria (HQ)</li>
-            <li>Abuja | Port Harcourt | Kano</li>
+            <li>Abuja, Nigeria (HQ)</li>
+            <li>Lagos | Port Harcourt | Kano</li>
             <li><a href="mailto:info@thrivecoretech.com">info@thrivecoretech.com</a></li>
             <li><a href="tel:+2341234567890">+234 123 456 7890</a></li>
           </ul>

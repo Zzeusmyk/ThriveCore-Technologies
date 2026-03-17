@@ -20,18 +20,22 @@
   <header class="header" id="header">
     <nav class="nav container">
       <a href="index.html" class="nav-logo">
-        <!-- Inline SVG Logo Mark -->
-        <svg class="logo-icon" viewBox="0 0 50 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="logo-full" viewBox="0 0 260 70" fill="none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#fbbf24"/>
-              <stop offset="50%" stop-color="#f59e0b"/>
-              <stop offset="100%" stop-color="#d97706"/>
+              <stop offset="0%" stop-color="#f28c28"/>
+              <stop offset="50%" stop-color="#e04e3e"/>
+              <stop offset="100%" stop-color="#a62d6b"/>
             </linearGradient>
           </defs>
-          <path d="M25 2 L45 22 L39 22 L25 8 L11 22 L5 22 Z" fill="url(#logoGrad)"/>
+          <!-- Chevron Mark -->
+          <path d="M130 2 L156 24 L148 24 L130 9 L112 24 L104 24 Z" fill="url(#logoGrad)" />
+          <!-- THRIVECORE text -->
+          <text x="130" y="46" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="800" font-size="22" fill="#0f2341" letter-spacing="2">THRIVECORE</text>
+          <!-- ® symbol -->
+          <text x="218" y="38" font-family="Poppins, sans-serif" font-weight="400" font-size="7" fill="#0f2341">®</text>
+          <text x="130" y="63" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" font-size="9" fill="#0f2341" letter-spacing="5">TECHNOLOGIES</text>
         </svg>
-        <span>Thrive<span class="highlight">Core</span></span>
       </a>
 
       <ul class="nav-links" id="navLinks">
@@ -210,7 +214,7 @@
         <div class="about-content fade-in">
           <span class="section-label">About Us</span>
           <h2>Your Trusted Technology Partner Since 2015</h2>
-          <p>ThriveCore Technologies Nigeria Limited is a premier IT solutions provider headquartered in Lagos, with regional offices across Nigeria. We specialize in delivering innovative solutions that empower African businesses.</p>
+          <p>ThriveCore Technologies Nigeria Limited is a premier IT solutions provider headquartered in Abuja, with regional offices across Nigeria. We specialize in delivering innovative solutions that empower African businesses.</p>
           <p>With over 120 skilled professionals and 350+ satisfied clients across financial services, healthcare, education, oil & gas, manufacturing, and government sectors, we are one of Nigeria's fastest-growing IT service providers.</p>
 
           <div class="values-list">
@@ -252,9 +256,13 @@
       </div>
 
       <div class="products-grid">
+        <a href="products.html#thriveSMS" class="product-card fade-in">
+          <div class="product-name">Thrive<span>SMS</span></div>
+          <p>Our flagship product &mdash; all-in-one school management system for admissions, academics, fees, staff HR, and parent communication.</p>
+        </a>
         <a href="products.html#thriveERP" class="product-card fade-in">
           <div class="product-name">Thrive<span>ERP</span></div>
-          <p>Flagship enterprise resource planning for Nigerian businesses &mdash; finance, inventory, production, HR, and CRM in one platform.</p>
+          <p>Enterprise resource planning for Nigerian businesses &mdash; finance, inventory, production, HR, and CRM in one platform.</p>
         </a>
         <a href="products.html#thriveHR" class="product-card fade-in">
           <div class="product-name">Thrive<span>HR</span></div>
@@ -275,6 +283,10 @@
         <a href="products.html#thriveLearn" class="product-card fade-in">
           <div class="product-name">Thrive<span>Learn</span></div>
           <p>Versatile e-learning platform with course authoring, virtual classrooms, assessments, and certification management.</p>
+        </a>
+        <a href="products.html#thriveSpa" class="product-card fade-in">
+          <div class="product-name">Thrive<span>Spa</span> Tech</div>
+          <p>Intelligent spa management platform with online booking, client profiles, therapist scheduling, and marketing automation.</p>
         </a>
       </div>
     </div>
@@ -341,8 +353,8 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.html" class="nav-logo">
-            <svg class="logo-icon" viewBox="0 0 50 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <a href="index.html" class="nav-logo footer-logo">
+            <svg class="logo-full" viewBox="0 0 260 70" fill="none" xmlns="http://www.w3.org/2000/svg">
               <defs>
                 <linearGradient id="logoGradFoot" x1="0%" y1="0%" x2="100%" y2="100%">
                   <stop offset="0%" stop-color="#f28c28"/>
@@ -350,9 +362,11 @@
                   <stop offset="100%" stop-color="#a62d6b"/>
                 </linearGradient>
               </defs>
-              <path d="M25 2 L45 22 L39 22 L25 8 L11 22 L5 22 Z" fill="url(#logoGradFoot)"/>
-            </svg>
-            <span style="color:#fff;">Thrive<span class="highlight">Core</span></span>
+              <path d="M130 2 L156 24 L148 24 L130 9 L112 24 L104 24 Z" fill="url(#logoGradFoot)" />
+              <text x="130" y="46" text-anchor="middle" font-family="Poppins, sans-serif" font-weight="800" font-size="22" fill="#ffffff" letter-spacing="2">THRIVECORE</text>
+              <text x="218" y="38" font-family="Poppins, sans-serif" font-weight="400" font-size="7" fill="#ffffff">®</text>
+                            <text x="130" y="63" text-anchor="middle" font-family="Inter, sans-serif" font-weight="600" font-size="9" fill="rgba(255,255,255,0.6)" letter-spacing="5">TECHNOLOGIES</text>
+                          </svg>
           </a>
           <p>Empowering African businesses with innovative, reliable, and secure technology solutions since 2015.</p>
           <div class="footer-social">
@@ -372,13 +386,17 @@
         </div>
 
         <div class="footer-col">
-          <h4>Services</h4>
+          <h4>Products</h4>
           <ul>
-            <li><a href="services.html">Software Development</a></li>
-            <li><a href="services.html">Cybersecurity</a></li>
-            <li><a href="services.html">Cloud Computing</a></li>
-            <li><a href="services.html">Hardware & Infra</a></li>
-            <li><a href="services.html">IT Consulting</a></li>
+            <li><a href="products.html#thriveSMS">ThriveSMS</a></li>
+            <li><a href="products.html#thriveERP">ThriveERP</a></li>
+            <li><a href="products.html#thriveHR">ThriveHR</a></li>
+            <li><a href="products.html#thrivePOS">ThrivePOS</a></li>
+            <li><a href="products.html#thriveFinance">ThriveFinance</a></li>
+            <li><a href="products.html#thriveHealth">ThriveHealth</a></li>
+            <li><a href="products.html#thriveLearn">ThriveLearn</a></li>
+            <li><a href="products.html#thriveRetail">ThriveRetail</a></li>
+            <li><a href="products.html#thriveSpa">ThriveSpa</a></li>
           </ul>
         </div>
 
@@ -395,8 +413,8 @@
         <div class="footer-col">
           <h4>Contact</h4>
           <ul>
-            <li>Lagos, Nigeria (HQ)</li>
-            <li>Abuja | Port Harcourt | Kano</li>
+            <li>Abuja, Nigeria (HQ)</li>
+            <li>Lagos | Port Harcourt | Kano</li>
             <li><a href="mailto:info@thrivecoretech.com">info@thrivecoretech.com</a></li>
             <li><a href="tel:+2341234567890">+234 123 456 7890</a></li>
           </ul>
