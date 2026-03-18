@@ -515,6 +515,10 @@ p {
   gap: 20px;
 }
 
+.hero-stats-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
 .stat-item {
   text-align: center;
   padding: 24px 16px;
@@ -670,15 +674,34 @@ p {
   position: relative;
 }
 
-/* Orange geometric accent on image */
-.about-img-wrapper .placeholder-graphic::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 40%;
-  height: 40%;
-  background: linear-gradient(135deg, transparent 50%, rgba(226, 78, 62, 0.15) 50%);
+.about-tech-graphic {
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-hero);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.about-tech-graphic svg {
+  width: 100%;
+  height: 100%;
+}
+
+.stats-chart-graphic {
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-hero);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.stats-chart-graphic svg {
+  width: 100%;
+  height: 100%;
 }
 
 .about-floating-card {
@@ -1540,16 +1563,17 @@ p {
 }
 
 .service-detail-visual {
-  background: var(--blue-50);
+  background: var(--gradient-hero);
   border-radius: var(--radius-2xl);
   aspect-ratio: 4/3;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 4rem;
-  border: 2px solid var(--blue-100);
+  border: 2px solid rgba(37, 99, 184, 0.2);
   position: relative;
   overflow: hidden;
+  padding: 0;
   transition: var(--transition);
 }
 
@@ -1566,8 +1590,13 @@ p {
   opacity: 0.15;
 }
 
+.service-detail-visual svg {
+  width: 100%;
+  height: 100%;
+}
+
 .service-detail:hover .service-detail-visual {
-  border-color: var(--orange-200);
+  border-color: rgba(242, 140, 40, 0.3);
   box-shadow: var(--shadow-md);
 }
 
@@ -1612,8 +1641,10 @@ p {
 
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 .stats-item {
@@ -1898,7 +1929,8 @@ p {
 }
 
 @media (max-width: 480px) {
-  .hero-stats {
+  .hero-stats,
+  .hero-stats-3 {
     grid-template-columns: 1fr;
   }
 

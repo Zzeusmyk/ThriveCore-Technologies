@@ -64,8 +64,86 @@
       <div class="about-grid">
         <div class="about-image fade-in">
           <div class="about-img-wrapper">
-            <div class="placeholder-graphic">
-              <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            <div class="stats-chart-graphic">
+              <svg viewBox="0 0 480 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Background grid -->
+                <line x1="60" y1="40" x2="60" y2="300" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+                <line x1="60" y1="300" x2="450" y2="300" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+                <line x1="60" y1="235" x2="450" y2="235" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="4"/>
+                <line x1="60" y1="170" x2="450" y2="170" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="4"/>
+                <line x1="60" y1="105" x2="450" y2="105" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="4"/>
+
+                <!-- Y-axis labels -->
+                <text x="48" y="304" text-anchor="end" font-family="Inter,sans-serif" font-size="10" fill="rgba(255,255,255,0.35)">0</text>
+                <text x="48" y="239" text-anchor="end" font-family="Inter,sans-serif" font-size="10" fill="rgba(255,255,255,0.35)">100</text>
+                <text x="48" y="174" text-anchor="end" font-family="Inter,sans-serif" font-size="10" fill="rgba(255,255,255,0.35)">200</text>
+                <text x="48" y="109" text-anchor="end" font-family="Inter,sans-serif" font-size="10" fill="rgba(255,255,255,0.35)">100</text>
+
+                <!-- Bar chart - Clients Growth -->
+                <defs>
+                  <linearGradient id="barGrad1" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#4a8ad4"/>
+                    <stop offset="100%" stop-color="#1a4080"/>
+                  </linearGradient>
+                  <linearGradient id="barGrad2" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#f28c28"/>
+                    <stop offset="100%" stop-color="#e04e3e"/>
+                  </linearGradient>
+                  <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#f28c28"/>
+                    <stop offset="50%" stop-color="#e04e3e"/>
+                    <stop offset="100%" stop-color="#a62d6b"/>
+                  </linearGradient>
+                </defs>
+
+                <!-- Bars - Blue (Clients) -->
+                <rect x="85" y="260" width="28" height="40" rx="4" fill="url(#barGrad1)" opacity="0.9"/>
+                <rect x="145" y="230" width="28" height="70" rx="4" fill="url(#barGrad1)" opacity="0.9"/>
+                <rect x="205" y="195" width="28" height="105" rx="4" fill="url(#barGrad1)" opacity="0.9"/>
+                <rect x="265" y="155" width="28" height="145" rx="4" fill="url(#barGrad1)" opacity="0.9"/>
+                <rect x="325" y="120" width="28" height="180" rx="4" fill="url(#barGrad1)" opacity="0.9"/>
+                <rect x="385" y="82" width="28" height="218" rx="4" fill="url(#barGrad1)" opacity="0.9"/>
+
+                <!-- Bars - Orange (Revenue) -->
+                <rect x="117" y="272" width="20" height="28" rx="4" fill="url(#barGrad2)" opacity="0.85"/>
+                <rect x="177" y="252" width="20" height="48" rx="4" fill="url(#barGrad2)" opacity="0.85"/>
+                <rect x="237" y="225" width="20" height="75" rx="4" fill="url(#barGrad2)" opacity="0.85"/>
+                <rect x="297" y="190" width="20" height="110" rx="4" fill="url(#barGrad2)" opacity="0.85"/>
+                <rect x="357" y="158" width="20" height="142" rx="4" fill="url(#barGrad2)" opacity="0.85"/>
+                <rect x="417" y="115" width="20" height="185" rx="4" fill="url(#barGrad2)" opacity="0.85"/>
+
+                <!-- Trend Line -->
+                <polyline points="99,255 159,222 219,185 279,145 339,110 399,72"
+                  stroke="url(#lineGrad)" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+                <!-- Trend dots -->
+                <circle cx="99" cy="255" r="5" fill="#f28c28" stroke="#fff" stroke-width="2"/>
+                <circle cx="159" cy="222" r="5" fill="#f28c28" stroke="#fff" stroke-width="2"/>
+                <circle cx="219" cy="185" r="5" fill="#e04e3e" stroke="#fff" stroke-width="2"/>
+                <circle cx="279" cy="145" r="5" fill="#e04e3e" stroke="#fff" stroke-width="2"/>
+                <circle cx="339" cy="110" r="5" fill="#a62d6b" stroke="#fff" stroke-width="2"/>
+                <circle cx="399" cy="72" r="6" fill="#a62d6b" stroke="#fff" stroke-width="2.5"/>
+
+                <!-- X-axis labels -->
+                <text x="99" y="322" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="rgba(255,255,255,0.45)">2015</text>
+                <text x="159" y="322" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="rgba(255,255,255,0.45)">2017</text>
+                <text x="219" y="322" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="rgba(255,255,255,0.45)">2019</text>
+                <text x="279" y="322" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="rgba(255,255,255,0.45)">2021</text>
+                <text x="339" y="322" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" fill="rgba(255,255,255,0.45)">2023</text>
+                <text x="399" y="322" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="600" fill="rgba(255,255,255,0.7)">2025</text>
+
+                <!-- Top label -->
+                <text x="99" y="248" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="600" fill="rgba(255,255,255,0.5)">50</text>
+                <text x="399" y="65" text-anchor="middle" font-family="Inter,sans-serif" font-size="11" font-weight="700" fill="#fff">100+</text>
+
+                <!-- Legend -->
+                <rect x="100" y="340" width="12" height="12" rx="3" fill="url(#barGrad1)"/>
+                <text x="118" y="350" font-family="Inter,sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">Clients</text>
+                <rect x="180" y="340" width="12" height="12" rx="3" fill="url(#barGrad2)"/>
+                <text x="198" y="350" font-family="Inter,sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">Revenue</text>
+                <line x1="275" y1="346" x2="295" y2="346" stroke="url(#lineGrad)" stroke-width="2.5" stroke-linecap="round"/>
+                <text x="302" y="350" font-family="Inter,sans-serif" font-size="10" fill="rgba(255,255,255,0.5)">Growth Trend</text>
+              </svg>
             </div>
           </div>
           <div class="about-floating-card">
@@ -77,9 +155,9 @@
         <div class="about-content fade-in">
           <span class="section-label">Our Story</span>
           <h2>Building Africa's Digital Future</h2>
-          <p>ThriveCore Technologies Nigeria Limited is a premier information technology solutions provider established in 2015, headquartered in Abuja with regional offices in Lagos, Port Harcourt, and Kano.</p>
-          <p>As a dynamic and innovative IT company, we specialize in cutting-edge software development, comprehensive ICT services, cybersecurity solutions, and enterprise hardware configuration. Our team of over 120 highly skilled professionals delivers exceptional technological solutions that enable businesses across Nigeria and West Africa to optimize operations, secure digital assets, and achieve sustainable growth.</p>
-          <p>With a proven track record of serving over 350 clients across financial services, healthcare, education, oil and gas, manufacturing, and government sectors, ThriveCore Technologies has established itself as a trusted technology partner.</p>
+          <p>ThriveCore Technologies Nigeria Limited is a premier information technology solutions provider established in 2015, headquartered in Abuja, Nigeria.</p>
+          <p>As a dynamic and innovative IT company, we specialize in cutting-edge software development, comprehensive ICT services, cybersecurity solutions, and enterprise hardware configuration. Our team of highly skilled professionals delivers exceptional technological solutions that enable businesses across Nigeria and West Africa to optimize operations, secure digital assets, and achieve sustainable growth.</p>
+          <p>With a proven track record of serving over 100 clients across financial services, healthcare, education, oil and gas, manufacturing, and government sectors, ThriveCore Technologies has established itself as a trusted technology partner.</p>
         </div>
       </div>
     </div>
@@ -90,20 +168,16 @@
     <div class="container">
       <div class="stats-grid">
         <div class="stats-item fade-in">
-          <span class="number" data-target="350">0+</span>
+          <span class="number" data-target="100">0+</span>
           <span class="label">Clients Served</span>
-        </div>
-        <div class="stats-item fade-in">
-          <span class="number" data-target="120">0+</span>
-          <span class="label">Team Members</span>
         </div>
         <div class="stats-item fade-in">
           <span class="number" data-target="10">0+</span>
           <span class="label">Years of Excellence</span>
         </div>
         <div class="stats-item fade-in">
-          <span class="number" data-target="4">0</span>
-          <span class="label">Office Locations</span>
+          <span class="number" data-target="10">0</span>
+          <span class="label">Software Products</span>
         </div>
       </div>
     </div>
@@ -213,8 +287,8 @@
         <div class="timeline-item fade-in">
           <div class="timeline-dot">2017</div>
           <div class="timeline-content">
-            <h4>Lagos Office Opened</h4>
-            <p>Expanded operations to Nigeria's commercial hub, serving corporate and financial sector clients.</p>
+            <h4>First Major Enterprise Client</h4>
+            <p>Secured our first enterprise contract, delivering custom ERP solutions to a leading Nigerian financial institution.</p>
           </div>
         </div>
         <div class="timeline-item fade-in">
@@ -227,14 +301,14 @@
         <div class="timeline-item fade-in">
           <div class="timeline-dot">2021</div>
           <div class="timeline-content">
-            <h4>Regional Expansion</h4>
-            <p>Opened offices in Port Harcourt and Kano, establishing a nationwide presence.</p>
+            <h4>Product Suite Launch</h4>
+            <p>Launched ThriveSMS, ThriveHealth, and ThriveFinance, expanding our enterprise product portfolio.</p>
           </div>
         </div>
         <div class="timeline-item fade-in">
           <div class="timeline-dot">2023</div>
           <div class="timeline-content">
-            <h4>350+ Clients & Growing</h4>
+            <h4>100+ Clients & Growing</h4>
             <p>Recognized as one of Nigeria's fastest-growing IT service providers with a team of 120+ professionals.</p>
           </div>
         </div>
@@ -360,6 +434,7 @@
           <h4>Products</h4>
           <ul>
             <li><a href="products.html#thriveSMS">ThriveSMS</a></li>
+            <li><a href="products.html#thriveSpa">ThriveSpa</a></li>
             <li><a href="products.html#thriveERP">ThriveERP</a></li>
             <li><a href="products.html#thriveHR">ThriveHR</a></li>
             <li><a href="products.html#thrivePOS">ThrivePOS</a></li>
@@ -367,7 +442,7 @@
             <li><a href="products.html#thriveHealth">ThriveHealth</a></li>
             <li><a href="products.html#thriveLearn">ThriveLearn</a></li>
             <li><a href="products.html#thriveRetail">ThriveRetail</a></li>
-            <li><a href="products.html#thriveSpa">ThriveSpa</a></li>
+            <li><a href="products.html#thriveLaundry">ThriveLaundry</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -383,7 +458,6 @@
           <h4>Contact</h4>
           <ul>
             <li>Abuja, Nigeria (HQ)</li>
-            <li>Lagos | Port Harcourt | Kano</li>
             <li><a href="mailto:info@thrivecoretech.com">info@thrivecoretech.com</a></li>
             <li><a href="tel:+2341234567890">+234 123 456 7890</a></li>
           </ul>

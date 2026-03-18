@@ -74,14 +74,10 @@
         <div class="hero-visual">
           <div class="hero-graphic">
             <div class="hero-card">
-              <div class="hero-stats">
+              <div class="hero-stats hero-stats-3">
                 <div class="stat-item">
-                  <span class="stat-number" data-target="350">0</span>
+                  <span class="stat-number" data-target="100">0</span>
                   <span class="stat-label">Clients Served</span>
-                </div>
-                <div class="stat-item">
-                  <span class="stat-number" data-target="120">0</span>
-                  <span class="stat-label">Professionals</span>
                 </div>
                 <div class="stat-item">
                   <span class="stat-number" data-target="10">0</span>
@@ -201,8 +197,82 @@
       <div class="about-grid">
         <div class="about-image fade-in">
           <div class="about-img-wrapper">
-            <div class="placeholder-graphic">
-              <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" opacity="0.3"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <div class="about-tech-graphic">
+              <svg viewBox="0 0 480 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="aboutGrad1" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#f28c28"/>
+                    <stop offset="50%" stop-color="#e04e3e"/>
+                    <stop offset="100%" stop-color="#a62d6b"/>
+                  </linearGradient>
+                  <linearGradient id="aboutGrad2" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#4a8ad4"/>
+                    <stop offset="100%" stop-color="#1a4080"/>
+                  </linearGradient>
+                </defs>
+
+                <!-- Background decorative circles -->
+                <circle cx="380" cy="80" r="60" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+                <circle cx="100" cy="280" r="45" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+
+                <!-- Central shield / trust icon -->
+                <path d="M240 60 L300 90 L300 150 C300 195 270 230 240 245 C210 230 180 195 180 150 L180 90 Z" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)" stroke-width="1.5"/>
+                <path d="M240 80 L288 104 L288 150 C288 188 262 218 240 230 C218 218 192 188 192 150 L192 104 Z" fill="url(#aboutGrad2)" opacity="0.2"/>
+                <polyline points="220,150 235,165 262,135" stroke="url(#aboutGrad1)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+                <!-- Connection nodes -->
+                <!-- Top left - Cloud -->
+                <rect x="60" y="55" width="80" height="55" rx="12" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                <path d="M90 85 C90 75 98 70 105 70 C108 63 118 60 125 65 C130 62 138 65 138 72 C142 72 145 76 145 80 C145 85 142 88 138 88 L92 88 C88 88 85 85 85 82 C85 79 87 77 90 77" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" fill="none"/>
+                <text x="100" y="100" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,0.3)" font-weight="600">CLOUD</text>
+
+                <!-- Top right - Code -->
+                <rect x="340" y="55" width="80" height="55" rx="12" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                <text x="362" y="82" font-family="monospace" font-size="14" fill="rgba(255,255,255,0.4)">&lt;/&gt;</text>
+                <text x="363" y="100" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,0.3)" font-weight="600">SOFTWARE</text>
+
+                <!-- Bottom left - Lock -->
+                <rect x="60" y="200" width="80" height="55" rx="12" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                <rect x="92" y="222" width="16" height="14" rx="3" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" fill="none"/>
+                <path d="M95 222 L95 217 C95 213 98 210 100 210 C102 210 105 213 105 217 L105 222" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" fill="none"/>
+                <text x="82" y="248" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,0.3)" font-weight="600">SECURITY</text>
+
+                <!-- Bottom right - Server -->
+                <rect x="340" y="200" width="80" height="55" rx="12" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                <rect x="362" y="215" width="36" height="10" rx="2" stroke="rgba(255,255,255,0.35)" stroke-width="1" fill="none"/>
+                <circle cx="370" cy="220" r="2" fill="rgba(255,255,255,0.3)"/>
+                <rect x="362" y="228" width="36" height="10" rx="2" stroke="rgba(255,255,255,0.35)" stroke-width="1" fill="none"/>
+                <circle cx="370" cy="233" r="2" fill="url(#aboutGrad1)"/>
+                <text x="356" y="248" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,0.3)" font-weight="600">HARDWARE</text>
+
+                <!-- Connection lines from nodes to shield -->
+                <line x1="140" y1="82" x2="180" y2="120" stroke="url(#aboutGrad1)" stroke-width="1" opacity="0.3" stroke-dasharray="4,3"/>
+                <line x1="340" y1="82" x2="300" y2="120" stroke="url(#aboutGrad1)" stroke-width="1" opacity="0.3" stroke-dasharray="4,3"/>
+                <line x1="140" y1="228" x2="180" y2="180" stroke="url(#aboutGrad1)" stroke-width="1" opacity="0.3" stroke-dasharray="4,3"/>
+                <line x1="340" y1="228" x2="300" y2="180" stroke="url(#aboutGrad1)" stroke-width="1" opacity="0.3" stroke-dasharray="4,3"/>
+
+                <!-- Pulse dots on lines -->
+                <circle cx="160" cy="100" r="3" fill="#f28c28" opacity="0.6"/>
+                <circle cx="320" cy="100" r="3" fill="#e04e3e" opacity="0.6"/>
+                <circle cx="160" cy="205" r="3" fill="#a62d6b" opacity="0.6"/>
+                <circle cx="320" cy="205" r="3" fill="#f28c28" opacity="0.6"/>
+
+                <!-- Bottom bar - mini stats -->
+                <rect x="80" y="290" width="320" height="45" rx="10" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+                <text x="140" y="310" text-anchor="middle" font-family="Poppins,sans-serif" font-size="16" font-weight="800" fill="url(#aboutGrad1)">100+</text>
+                <text x="140" y="324" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,0.35)">CLIENTS</text>
+
+                <line x1="200" y1="298" x2="200" y2="328" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+                <text x="240" y="310" text-anchor="middle" font-family="Poppins,sans-serif" font-size="16" font-weight="800" fill="url(#aboutGrad1)">10+</text>
+                <text x="240" y="324" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,0.35)">YEARS</text>
+
+                <line x1="280" y1="298" x2="280" y2="328" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+                <text x="340" y="310" text-anchor="middle" font-family="Poppins,sans-serif" font-size="16" font-weight="800" fill="url(#aboutGrad1)">9</text>
+                <text x="340" y="324" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="rgba(255,255,255,0.35)">PRODUCTS</text>
+              </svg>
             </div>
           </div>
           <div class="about-floating-card">
@@ -214,8 +284,8 @@
         <div class="about-content fade-in">
           <span class="section-label">About Us</span>
           <h2>Your Trusted Technology Partner Since 2015</h2>
-          <p>ThriveCore Technologies Nigeria Limited is a premier IT solutions provider headquartered in Abuja, with regional offices across Nigeria. We specialize in delivering innovative solutions that empower African businesses.</p>
-          <p>With over 120 skilled professionals and 350+ satisfied clients across financial services, healthcare, education, oil & gas, manufacturing, and government sectors, we are one of Nigeria's fastest-growing IT service providers.</p>
+          <p>ThriveCore Technologies Nigeria Limited is a premier IT solutions provider headquartered in Abuja, Nigeria. We specialize in delivering innovative solutions that empower African businesses.</p>
+          <p>With 100+ satisfied clients across financial services, healthcare, education, oil & gas, manufacturing, and government sectors, we are one of Nigeria's fastest-growing IT service providers.</p>
 
           <div class="values-list">
             <div class="value-item">
@@ -260,6 +330,10 @@
           <div class="product-name">Thrive<span>SMS</span></div>
           <p>Our flagship product &mdash; all-in-one school management system for admissions, academics, fees, staff HR, and parent communication.</p>
         </a>
+        <a href="products.html#thriveSpa" class="product-card fade-in">
+          <div class="product-name">Thrive<span>Spa</span></div>
+          <p>Intelligent spa management platform with online booking, client profiles, therapist scheduling, and marketing automation.</p>
+        </a>
         <a href="products.html#thriveERP" class="product-card fade-in">
           <div class="product-name">Thrive<span>ERP</span></div>
           <p>Enterprise resource planning for Nigerian businesses &mdash; finance, inventory, production, HR, and CRM in one platform.</p>
@@ -284,9 +358,9 @@
           <div class="product-name">Thrive<span>Learn</span></div>
           <p>Versatile e-learning platform with course authoring, virtual classrooms, assessments, and certification management.</p>
         </a>
-        <a href="products.html#thriveSpa" class="product-card fade-in">
-          <div class="product-name">Thrive<span>Spa</span> Tech</div>
-          <p>Intelligent spa management platform with online booking, client profiles, therapist scheduling, and marketing automation.</p>
+        <a href="products.html#thriveLaundry" class="product-card fade-in">
+          <div class="product-name">Thrive<span>Laundry</span></div>
+          <p>Smart laundry management with order tracking, pickup & delivery, auto billing, loyalty programs, and SMS notifications.</p>
         </a>
       </div>
     </div>
@@ -328,7 +402,7 @@
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
           </div>
           <h4>Proven Track Record</h4>
-          <p>350+ clients across 6 industry sectors with a 95% client satisfaction rate and consistent growth.</p>
+          <p>100+ clients across 6 industry sectors with a 95% client satisfaction rate and consistent growth.</p>
         </div>
       </div>
     </div>
@@ -389,6 +463,7 @@
           <h4>Products</h4>
           <ul>
             <li><a href="products.html#thriveSMS">ThriveSMS</a></li>
+            <li><a href="products.html#thriveSpa">ThriveSpa</a></li>
             <li><a href="products.html#thriveERP">ThriveERP</a></li>
             <li><a href="products.html#thriveHR">ThriveHR</a></li>
             <li><a href="products.html#thrivePOS">ThrivePOS</a></li>
@@ -396,7 +471,7 @@
             <li><a href="products.html#thriveHealth">ThriveHealth</a></li>
             <li><a href="products.html#thriveLearn">ThriveLearn</a></li>
             <li><a href="products.html#thriveRetail">ThriveRetail</a></li>
-            <li><a href="products.html#thriveSpa">ThriveSpa</a></li>
+            <li><a href="products.html#thriveLaundry">ThriveLaundry</a></li>
           </ul>
         </div>
 
@@ -414,7 +489,6 @@
           <h4>Contact</h4>
           <ul>
             <li>Abuja, Nigeria (HQ)</li>
-            <li>Lagos | Port Harcourt | Kano</li>
             <li><a href="mailto:info@thrivecoretech.com">info@thrivecoretech.com</a></li>
             <li><a href="tel:+2341234567890">+234 123 456 7890</a></li>
           </ul>
