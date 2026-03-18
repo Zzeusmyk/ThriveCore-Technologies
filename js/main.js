@@ -111,18 +111,38 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
       }
 
-      // Simulate form submission
+      // Submit to backend API
       const submitBtn = contactForm.querySelector('.form-submit');
       const originalText = submitBtn.innerHTML;
       submitBtn.innerHTML = 'Sending...';
       submitBtn.disabled = true;
 
-      setTimeout(() => {
-        showFormMessage('Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.', 'success');
-        contactForm.reset();
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
-      }, 1500);
+      // Use current origin for API, fallback to localhost:4000
+      const apiBase = window.location.protocol === 'file:'
+        ? 'http://localhost:4000'
+        : '';
+
+      fetch(apiBase + '/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      })
+        .then(res => res.json())
+        .then(result => {
+          if (result.success) {
+            showFormMessage(result.message, 'success');
+            contactForm.reset();
+          } else {
+            showFormMessage(result.message || 'Something went wrong.', 'error');
+          }
+        })
+        .catch(() => {
+          showFormMessage('Could not connect to the server. Please try again later.', 'error');
+        })
+        .finally(() => {
+          submitBtn.innerHTML = originalText;
+          submitBtn.disabled = false;
+        });
     });
   }
 
