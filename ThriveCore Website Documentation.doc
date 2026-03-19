@@ -1,0 +1,460 @@
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+<meta charset="utf-8">
+<title>ThriveCore Technologies - Website Documentation</title>
+<style>
+  body { font-family: Calibri, Arial, sans-serif; font-size: 12pt; line-height: 1.6; color: #333; margin: 72pt; }
+  h1 { font-size: 28pt; color: #0f2341; text-align: center; margin-top: 200pt; margin-bottom: 12pt; font-weight: bold; }
+  h2 { font-size: 20pt; color: #0f2341; border-bottom: 2px solid #f28c28; padding-bottom: 6pt; margin-top: 36pt; margin-bottom: 12pt; page-break-before: always; }
+  h3 { font-size: 15pt; color: #1a4080; margin-top: 24pt; margin-bottom: 8pt; }
+  h4 { font-size: 13pt; color: #1e4f9f; margin-top: 18pt; margin-bottom: 6pt; }
+  p { margin-bottom: 8pt; text-align: justify; }
+  .subtitle { font-size: 16pt; color: #6b7280; text-align: center; margin-bottom: 6pt; }
+  .version { font-size: 11pt; color: #9aa1ad; text-align: center; margin-bottom: 200pt; }
+  .orange { color: #f28c28; }
+  table { border-collapse: collapse; width: 100%; margin: 12pt 0; }
+  th { background-color: #0f2341; color: white; padding: 8pt 12pt; text-align: left; font-size: 11pt; }
+  td { border: 1px solid #e2e5ea; padding: 8pt 12pt; font-size: 11pt; vertical-align: top; }
+  tr:nth-child(even) td { background-color: #f8f9fb; }
+  ul, ol { margin-bottom: 12pt; margin-left: 24pt; }
+  li { margin-bottom: 4pt; }
+  .code { font-family: Consolas, monospace; font-size: 10pt; background-color: #f0f2f5; padding: 8pt 12pt; border: 1px solid #e2e5ea; border-radius: 4pt; display: block; margin: 8pt 0; white-space: pre; }
+  .note { background-color: #e8f1fa; border-left: 4pt solid #1e4f9f; padding: 10pt 14pt; margin: 12pt 0; font-size: 11pt; }
+  .warning { background-color: #fef0d5; border-left: 4pt solid #f28c28; padding: 10pt 14pt; margin: 12pt 0; font-size: 11pt; }
+  .toc { margin: 24pt 0; }
+  .toc a { color: #1e4f9f; text-decoration: none; }
+  .toc li { margin-bottom: 6pt; font-size: 12pt; }
+  .toc li li { font-size: 11pt; }
+  hr { border: none; border-top: 1px solid #e2e5ea; margin: 24pt 0; }
+  .footer-text { font-size: 9pt; color: #9aa1ad; text-align: center; margin-top: 48pt; }
+</style>
+</head>
+<body>
+
+<!-- ============ COVER PAGE ============ -->
+<h1>THRIVECORE<span class="orange">&reg;</span><br>TECHNOLOGIES</h1>
+<p class="subtitle">Website Technical Documentation</p>
+<p class="version">Version 1.0 &bull; March 2026<br>Prepared for ThriveCore Technologies Nigeria Limited</p>
+
+<!-- ============ TABLE OF CONTENTS ============ -->
+<h2>Table of Contents</h2>
+<ol class="toc">
+  <li>Project Overview</li>
+  <li>Technology Stack</li>
+  <li>File Structure</li>
+  <li>Pages Overview
+    <ol>
+      <li>Home Page (index.html)</li>
+      <li>About Us Page (about.html)</li>
+      <li>Services Page (services.html)</li>
+      <li>Products Page (products.html)</li>
+      <li>Contact Page (contact.html)</li>
+      <li>Admin Dashboard (admin.html)</li>
+    </ol>
+  </li>
+  <li>Design System
+    <ol>
+      <li>Colour Palette</li>
+      <li>Typography</li>
+      <li>Components</li>
+    </ol>
+  </li>
+  <li>Products Catalogue</li>
+  <li>Backend &amp; API</li>
+  <li>Database Schema</li>
+  <li>How to Run the Website</li>
+  <li>Deployment Guide</li>
+  <li>Maintenance &amp; Updates</li>
+</ol>
+
+<!-- ============ 1. PROJECT OVERVIEW ============ -->
+<h2>1. Project Overview</h2>
+
+<h3>1.1 About the Company</h3>
+<p>ThriveCore Technologies Nigeria Limited is a premier information technology solutions provider established in 2015, headquartered in Abuja, Nigeria. The company specialises in cutting-edge software development, comprehensive ICT services, cybersecurity solutions, and enterprise hardware configuration.</p>
+
+<p>With a proven track record of serving over 100 clients across financial services, healthcare, education, oil and gas, manufacturing, and government sectors, ThriveCore Technologies has established itself as a trusted technology partner in Nigeria and West Africa.</p>
+
+<h3>1.2 Website Purpose</h3>
+<p>The ThriveCore Technologies website serves as the company's primary digital presence, designed to:</p>
+<ul>
+  <li>Showcase the company's services and product portfolio</li>
+  <li>Establish brand credibility and trust with potential clients</li>
+  <li>Provide detailed information about each software product</li>
+  <li>Enable prospective clients to submit enquiries via the contact form</li>
+  <li>Store and manage contact submissions through a backend admin dashboard</li>
+</ul>
+
+<h3>1.3 Key Features</h3>
+<ul>
+  <li>Fully responsive design for desktop, tablet, and mobile devices</li>
+  <li>Modern UI with curved-edge sections and animated interactions</li>
+  <li>Floating pill-shaped navigation bar</li>
+  <li>10 product showcases with interactive UI mockups</li>
+  <li>Contact form with Node.js backend and SQLite database storage</li>
+  <li>Admin dashboard for viewing and managing form submissions</li>
+  <li>Scroll-reveal animations and animated number counters</li>
+  <li>HD SVG social media icons (LinkedIn, X, Facebook, Instagram)</li>
+  <li>Full SVG logo reproduction matching the brand identity</li>
+</ul>
+
+<!-- ============ 2. TECHNOLOGY STACK ============ -->
+<h2>2. Technology Stack</h2>
+
+<table>
+  <tr><th>Category</th><th>Technology</th><th>Purpose</th></tr>
+  <tr><td>Frontend</td><td>HTML5</td><td>Page structure and content</td></tr>
+  <tr><td>Frontend</td><td>CSS3</td><td>Styling, layout, animations, responsive design</td></tr>
+  <tr><td>Frontend</td><td>Vanilla JavaScript</td><td>Interactivity, form handling, scroll animations</td></tr>
+  <tr><td>Backend</td><td>Node.js</td><td>Server runtime environment</td></tr>
+  <tr><td>Backend</td><td>Express 5.2</td><td>Web server framework and API routing</td></tr>
+  <tr><td>Database</td><td>SQLite (better-sqlite3)</td><td>Contact form submission storage</td></tr>
+  <tr><td>Middleware</td><td>CORS</td><td>Cross-origin resource sharing</td></tr>
+  <tr><td>Fonts</td><td>Google Fonts</td><td>Poppins (headings) and Inter (body text)</td></tr>
+  <tr><td>Icons</td><td>Inline SVG</td><td>All icons are hand-coded SVG for performance</td></tr>
+</table>
+
+<!-- ============ 3. FILE STRUCTURE ============ -->
+<h2>3. File Structure</h2>
+
+<div class="code">ThriveCore Technologies/
+├── index.html                  # Home page
+├── about.html                  # About Us page
+├── services.html               # Services page
+├── products.html               # Products showcase page
+├── contact.html                # Contact page with form
+├── admin.html                  # Admin dashboard (submissions viewer)
+├── server.js                   # Node.js/Express backend server
+├── package.json                # Node.js project configuration
+│
+├── css/
+│   ├── styles.css              # Global stylesheet (~1900 lines)
+│   └── products.css            # Products page specific styles (~630 lines)
+│
+├── js/
+│   └── main.js                 # Client-side JavaScript (~230 lines)
+│
+├── data/
+│   └── submissions.db          # SQLite database (auto-created)
+│
+├── images/                     # Directory for image assets
+│
+├── node_modules/               # Node.js dependencies (auto-installed)
+│
+└── ThriveCore Technologies
+    Nigeria Limited (1).docx    # Company profile document
+</div>
+
+<!-- ============ 4. PAGES OVERVIEW ============ -->
+<h2>4. Pages Overview</h2>
+
+<h3>4.1 Home Page (index.html)</h3>
+<p>The home page serves as the primary landing page and provides a comprehensive overview of ThriveCore Technologies.</p>
+
+<h4>Sections:</h4>
+<table>
+  <tr><th>Section</th><th>Description</th></tr>
+  <tr><td>Hero</td><td>Full-height hero with headline, description, CTA buttons, and animated stats card showing 100+ Clients, 10+ Years Experience, and 6 Industry Sectors</td></tr>
+  <tr><td>Clients Bar</td><td>Industry sector badges (Financial Services, Healthcare, Education, Oil &amp; Gas, Manufacturing, Government)</td></tr>
+  <tr><td>Services Overview</td><td>6 service cards with icons: Software Development, Cybersecurity, Cloud Computing, Hardware &amp; Infrastructure, ICT Training, IT Consulting</td></tr>
+  <tr><td>About Preview</td><td>Tech infographic SVG illustration with connected service nodes, company description, and core values</td></tr>
+  <tr><td>Products Grid</td><td>10 product cards linking to the Products page, with ThriveSMS as flagship</td></tr>
+  <tr><td>Why Choose Us</td><td>4 feature cards: Enterprise Security, 24/7 Support, Local Expertise, Proven Track Record</td></tr>
+  <tr><td>CTA Banner</td><td>Call-to-action section with dark gradient background</td></tr>
+  <tr><td>Footer</td><td>Company info, products list, company links, contact details, social media icons</td></tr>
+</table>
+
+<h3>4.2 About Us Page (about.html)</h3>
+<p>Provides detailed information about the company's history, mission, values, and team.</p>
+
+<h4>Sections:</h4>
+<table>
+  <tr><th>Section</th><th>Description</th></tr>
+  <tr><td>Page Hero</td><td>Dark gradient header with breadcrumb navigation</td></tr>
+  <tr><td>Our Story</td><td>Company overview with HD statistics chart (SVG) showing client and revenue growth from 2015-2025</td></tr>
+  <tr><td>Stats Bar</td><td>3 animated counters: 100+ Clients Served, 10+ Years of Excellence, 10 Software Products</td></tr>
+  <tr><td>Mission &amp; Vision</td><td>Two cards presenting the company's mission and vision statements</td></tr>
+  <tr><td>Core Values</td><td>6 value cards: Excellence, Innovation, Integrity, Client-Centricity, Collaboration, Community Impact</td></tr>
+  <tr><td>Key Milestones</td><td>Timeline from 2015 (Founded) to 2025 (A Decade of Impact) with 6 milestones</td></tr>
+  <tr><td>Leadership Team</td><td>4 team cards: CEO, CTO, COO, CISO</td></tr>
+</table>
+
+<h3>4.3 Services Page (services.html)</h3>
+<p>Detailed breakdown of all six service categories with rich SVG illustrations.</p>
+
+<h4>Services:</h4>
+<table>
+  <tr><th>#</th><th>Service</th><th>SVG Illustration</th></tr>
+  <tr><td>01</td><td>Software Development &amp; Products</td><td>Monitor with code editor, mobile phone, and code brackets</td></tr>
+  <tr><td>02</td><td>Cybersecurity Services</td><td>Shield with checkmark, security nodes, NDPR/GDPR badge</td></tr>
+  <tr><td>03</td><td>Hardware Configuration &amp; Infrastructure</td><td>Server rack with LED status lights and network connections</td></tr>
+  <tr><td>04</td><td>Cloud Computing Services</td><td>Cloud with IaaS/PaaS/SaaS cards, AWS/Azure/GCP badges</td></tr>
+  <tr><td>05</td><td>ICT Training &amp; Education</td><td>Laptop with video call, course content, certification badge</td></tr>
+  <tr><td>06</td><td>IT Consulting &amp; Advisory</td><td>Strategy board with roadmap timeline and growth chart</td></tr>
+</table>
+
+<p>The page also includes a Products section with all 7 original products, a Testimonials section with 3 client reviews, and a CTA banner.</p>
+
+<h3>4.4 Products Page (products.html)</h3>
+<p>The most comprehensive page, featuring all 10 software products with interactive UI mockups, feature chips, and demo CTAs.</p>
+
+<h4>Features:</h4>
+<ul>
+  <li><strong>Sticky product navigation bar</strong> &mdash; Scrollable pill-nav that highlights the active product section as the user scrolls</li>
+  <li><strong>Alternating layouts</strong> &mdash; Products alternate between left-visual/right-info and reversed layouts</li>
+  <li><strong>CSS-only UI mockups</strong> &mdash; Each product has a simulated app interface with coloured sidebars, toolbars, stat cards, charts, and tables</li>
+  <li><strong>Feature chips</strong> &mdash; Pill-shaped tags listing key features for each product</li>
+  <li><strong>"Why Thrive Products"</strong> &mdash; Dark section with 6 advantage cards</li>
+</ul>
+
+<h3>4.5 Contact Page (contact.html)</h3>
+<p>Provides contact information and a functional form connected to the backend server.</p>
+
+<h4>Sections:</h4>
+<table>
+  <tr><th>Section</th><th>Description</th></tr>
+  <tr><td>Contact Info</td><td>Head Office address (Abuja), email, phone number, business hours</td></tr>
+  <tr><td>Contact Form</td><td>7 fields: First Name*, Last Name*, Email*, Phone, Company, Service Interest (dropdown), Message*. Connected to /api/contact endpoint</td></tr>
+  <tr><td>Our Headquarters</td><td>Single office card for Abuja, Nigeria (HQ)</td></tr>
+  <tr><td>Map Placeholder</td><td>Placeholder section for future interactive map integration</td></tr>
+</table>
+
+<h3>4.6 Admin Dashboard (admin.html)</h3>
+<p>A protected dashboard page for viewing and managing contact form submissions.</p>
+
+<h4>Features:</h4>
+<ul>
+  <li><strong>Stats cards</strong> &mdash; Total submissions, unread count, today's submissions</li>
+  <li><strong>Submissions table</strong> &mdash; Status badge (New/Read), name, email, service, date, actions</li>
+  <li><strong>View detail modal</strong> &mdash; Full submission details including message content</li>
+  <li><strong>Delete functionality</strong> &mdash; Remove submissions with confirmation</li>
+  <li><strong>Auto-mark as read</strong> &mdash; Submissions are marked as read when viewed</li>
+  <li><strong>Refresh button</strong> &mdash; Reload data without page refresh</li>
+</ul>
+
+<!-- ============ 5. DESIGN SYSTEM ============ -->
+<h2>5. Design System</h2>
+
+<h3>5.1 Colour Palette</h3>
+<table>
+  <tr><th>Colour</th><th>Hex Code</th><th>Usage</th></tr>
+  <tr><td style="background:#0a1628;color:white;">Blue 950</td><td>#0a1628</td><td>Darkest backgrounds (footer watermark)</td></tr>
+  <tr><td style="background:#0f2341;color:white;">Blue 900</td><td>#0f2341</td><td>Footer, headings, logo text</td></tr>
+  <tr><td style="background:#153260;color:white;">Blue 800</td><td>#153260</td><td>Hero gradients</td></tr>
+  <tr><td style="background:#1a4080;color:white;">Blue 700</td><td>#1a4080</td><td>Hero gradients, card headings</td></tr>
+  <tr><td style="background:#1e4f9f;color:white;">Blue 600</td><td>#1e4f9f</td><td>Active nav, icons, buttons</td></tr>
+  <tr><td style="background:#2563b8;color:white;">Blue 500</td><td>#2563b8</td><td>Links, accents</td></tr>
+  <tr><td style="background:#e8f1fa;">Blue 50</td><td>#e8f1fa</td><td>Light section backgrounds</td></tr>
+  <tr><td style="background:#f28c28;color:white;">Accent Orange</td><td>#f28c28</td><td>Logo gradient start, accent highlights</td></tr>
+  <tr><td style="background:#e04e3e;color:white;">Accent Red</td><td>#e04e3e</td><td>Logo gradient middle, CTA button shadows</td></tr>
+  <tr><td style="background:#a62d6b;color:white;">Accent Magenta</td><td>#a62d6b</td><td>Logo gradient end</td></tr>
+  <tr><td style="background:#ffffff;border:1px solid #e2e5ea;">White</td><td>#ffffff</td><td>Backgrounds, cards, navbar</td></tr>
+</table>
+
+<h3>5.2 Typography</h3>
+<table>
+  <tr><th>Element</th><th>Font</th><th>Weight</th><th>Size</th></tr>
+  <tr><td>H1 (Hero)</td><td>Poppins</td><td>700</td><td>2.4rem - 3.6rem (responsive)</td></tr>
+  <tr><td>H2 (Sections)</td><td>Poppins</td><td>700</td><td>1.8rem - 2.8rem (responsive)</td></tr>
+  <tr><td>H3 (Cards)</td><td>Poppins</td><td>700</td><td>1.2rem - 1.5rem (responsive)</td></tr>
+  <tr><td>Body text</td><td>Inter</td><td>400</td><td>1rem (16px)</td></tr>
+  <tr><td>Buttons</td><td>Inter</td><td>600</td><td>0.95rem</td></tr>
+  <tr><td>Labels/Tags</td><td>Inter</td><td>700</td><td>0.78rem</td></tr>
+</table>
+
+<h3>5.3 Components</h3>
+
+<h4>Navigation Bar</h4>
+<p>Floating pill-shaped navbar, fixed 16px from top, centred with max-width 1200px. White background with border-radius 50px. Contains the full SVG logo (chevron + THRIVECORE + TECHNOLOGIES), navigation links with pill-shaped active state, and a gradient CTA button.</p>
+
+<h4>Buttons</h4>
+<table>
+  <tr><th>Type</th><th>Style</th></tr>
+  <tr><td>Primary (.btn-primary)</td><td>Orange-to-magenta gradient background, white text, pill-shaped, orange glow shadow</td></tr>
+  <tr><td>Secondary (.btn-secondary)</td><td>White background, blue text, blue border, pill-shaped</td></tr>
+  <tr><td>Outline (.btn-outline)</td><td>Transparent background, white text/border (for dark sections)</td></tr>
+  <tr><td>Blue (.btn-blue)</td><td>Blue gradient background, white text, blue glow shadow</td></tr>
+</table>
+
+<h4>Cards</h4>
+<p>All cards use border-radius 24px (--radius-xl), white background, 1px gray border, and hover effects including translateY(-6px to -8px) lift and shadow enhancement.</p>
+
+<h4>Section Layout</h4>
+<p>All sections have border-radius 32px with 12px horizontal margin, creating a curved-edge sectional layout. The hero and page heroes have top margin of 96px to clear the floating navbar. The footer has 16px bottom margin.</p>
+
+<!-- ============ 6. PRODUCTS CATALOGUE ============ -->
+<h2>6. Products Catalogue</h2>
+
+<table>
+  <tr><th>#</th><th>Product</th><th>Category</th><th>Badge</th><th>Key Features</th></tr>
+  <tr><td>1</td><td><strong>ThriveSMS</strong></td><td>School Management</td><td style="color:#f28c28;font-weight:bold;">Flagship</td><td>Student Management, Academic &amp; Timetables, Fee &amp; Finance, Staff &amp; HR, Parent Portal &amp; App, Hostel &amp; Transport</td></tr>
+  <tr><td>2</td><td><strong>ThriveSpa</strong></td><td>Spa &amp; Wellness</td><td style="color:#34d399;font-weight:bold;">New</td><td>Online Booking 24/7, Client Profiles, Therapist Scheduling, POS &amp; Payments, Loyalty &amp; Memberships, Marketing Automation</td></tr>
+  <tr><td>3</td><td><strong>ThriveERP</strong></td><td>Enterprise Resource Planning</td><td>&mdash;</td><td>Financial Management, Inventory Control, Production Planning, HR &amp; CRM Integration, Multi-Location, Nigerian Compliance</td></tr>
+  <tr><td>4</td><td><strong>ThriveHR</strong></td><td>Human Resources</td><td>&mdash;</td><td>Workforce Planning, Talent Acquisition, Payroll &amp; Tax Automation, Performance Reviews, Employee Self-Service, Labour Law Compliance</td></tr>
+  <tr><td>5</td><td><strong>ThrivePOS</strong></td><td>Point of Sale</td><td>&mdash;</td><td>Real-Time Inventory, Sales Analytics, Loyalty Programs, Barcode Scanning, Multi-Store Support, Offline Mode</td></tr>
+  <tr><td>6</td><td><strong>ThriveLearn</strong></td><td>E-Learning</td><td>&mdash;</td><td>Course Authoring, Virtual Classrooms, Assessment Engine, Certifications, Learning Analytics, Mobile Accessible</td></tr>
+  <tr><td>7</td><td><strong>ThriveFinance</strong></td><td>Financial Management</td><td>&mdash;</td><td>General Ledger, AP/AR Management, Nigerian Tax Automation, Multi-Currency, Budgeting &amp; Forecasting, Full Audit Trails</td></tr>
+  <tr><td>8</td><td><strong>ThriveHealth</strong></td><td>Healthcare</td><td>&mdash;</td><td>Electronic Medical Records, Appointment Scheduling, Lab &amp; Pharmacy, Billing &amp; Insurance, Telemedicine, Data Protection</td></tr>
+  <tr><td>9</td><td><strong>ThriveRetail</strong></td><td>Retail Management</td><td>&mdash;</td><td>Inventory Control, Supplier Management, Multi-Channel Sales, Promotional Pricing, Auto Purchase Orders, Retail Analytics</td></tr>
+  <tr><td>10</td><td><strong>ThriveLaundry</strong></td><td>Laundry Management</td><td>&mdash;</td><td>Order &amp; Job Tracking, Customer Management, Pricing &amp; Auto Billing, Pickup &amp; Delivery, Loyalty &amp; Subscriptions, SMS Notifications</td></tr>
+</table>
+
+<!-- ============ 7. BACKEND & API ============ -->
+<h2>7. Backend &amp; API</h2>
+
+<h3>7.1 Server Configuration</h3>
+<p>The backend is built with Node.js and Express 5.2, running on port 4000 by default. It serves all static website files and provides a RESTful API for contact form submissions.</p>
+
+<div class="code">File: server.js
+Port: 4000
+Database: data/submissions.db (SQLite)
+Dependencies: express, better-sqlite3, cors</div>
+
+<h3>7.2 API Endpoints</h3>
+<table>
+  <tr><th>Method</th><th>Endpoint</th><th>Description</th><th>Auth Required</th></tr>
+  <tr><td>POST</td><td>/api/contact</td><td>Submit a new contact form entry</td><td>No</td></tr>
+  <tr><td>GET</td><td>/api/submissions</td><td>Retrieve all submissions (newest first)</td><td>No*</td></tr>
+  <tr><td>GET</td><td>/api/submissions/:id</td><td>View a single submission (marks as read)</td><td>No*</td></tr>
+  <tr><td>DELETE</td><td>/api/submissions/:id</td><td>Delete a submission</td><td>No*</td></tr>
+  <tr><td>GET</td><td>/api/stats</td><td>Get total, unread, and today's counts</td><td>No*</td></tr>
+</table>
+
+<div class="warning"><strong>Note:</strong> Endpoints marked with * should have authentication added before deploying to production. Currently they are open for development purposes.</div>
+
+<h3>7.3 POST /api/contact Request Body</h3>
+<div class="code">{
+  "firstName": "John",        // Required
+  "lastName": "Doe",          // Required
+  "email": "john@company.com", // Required (validated)
+  "phone": "+234 800 000",    // Optional
+  "company": "Company Ltd",   // Optional
+  "service": "software",      // Optional
+  "message": "Hello..."       // Required
+}</div>
+
+<h3>7.4 Success Response</h3>
+<div class="code">{
+  "success": true,
+  "message": "Thank you! Your message has been received...",
+  "id": 1
+}</div>
+
+<!-- ============ 8. DATABASE SCHEMA ============ -->
+<h2>8. Database Schema</h2>
+
+<h3>Table: submissions</h3>
+<table>
+  <tr><th>Column</th><th>Type</th><th>Constraints</th><th>Description</th></tr>
+  <tr><td>id</td><td>INTEGER</td><td>PRIMARY KEY, AUTOINCREMENT</td><td>Unique submission ID</td></tr>
+  <tr><td>first_name</td><td>TEXT</td><td>NOT NULL</td><td>Submitter's first name</td></tr>
+  <tr><td>last_name</td><td>TEXT</td><td>NOT NULL</td><td>Submitter's last name</td></tr>
+  <tr><td>email</td><td>TEXT</td><td>NOT NULL</td><td>Submitter's email address</td></tr>
+  <tr><td>phone</td><td>TEXT</td><td>NULLABLE</td><td>Phone number</td></tr>
+  <tr><td>company</td><td>TEXT</td><td>NULLABLE</td><td>Company or organisation name</td></tr>
+  <tr><td>service</td><td>TEXT</td><td>NULLABLE</td><td>Service of interest</td></tr>
+  <tr><td>message</td><td>TEXT</td><td>NOT NULL</td><td>Message content</td></tr>
+  <tr><td>submitted_at</td><td>DATETIME</td><td>DEFAULT CURRENT_TIMESTAMP</td><td>Date and time of submission</td></tr>
+  <tr><td>is_read</td><td>INTEGER</td><td>DEFAULT 0</td><td>Read status (0 = unread, 1 = read)</td></tr>
+</table>
+
+<!-- ============ 9. HOW TO RUN ============ -->
+<h2>9. How to Run the Website</h2>
+
+<h3>9.1 Prerequisites</h3>
+<ul>
+  <li>Node.js (version 18 or higher) installed on the system</li>
+  <li>npm (comes with Node.js)</li>
+</ul>
+
+<h3>9.2 First-Time Setup</h3>
+<div class="code">1. Open a terminal/command prompt
+2. Navigate to the project folder:
+   cd "C:\Users\ZEUS\Desktop\ThriveCore Technologies"
+
+3. Install dependencies:
+   npm install
+
+4. Start the server:
+   npm start</div>
+
+<h3>9.3 Accessing the Site</h3>
+<table>
+  <tr><th>Page</th><th>URL</th></tr>
+  <tr><td>Home Page</td><td>http://localhost:4000</td></tr>
+  <tr><td>About Page</td><td>http://localhost:4000/about.html</td></tr>
+  <tr><td>Services Page</td><td>http://localhost:4000/services.html</td></tr>
+  <tr><td>Products Page</td><td>http://localhost:4000/products.html</td></tr>
+  <tr><td>Contact Page</td><td>http://localhost:4000/contact.html</td></tr>
+  <tr><td>Admin Dashboard</td><td>http://localhost:4000/admin</td></tr>
+</table>
+
+<div class="note"><strong>Important:</strong> The contact form only works when the site is accessed through the server (http://localhost:4000). Opening HTML files directly in the browser will not connect to the backend.</div>
+
+<!-- ============ 10. DEPLOYMENT GUIDE ============ -->
+<h2>10. Deployment Guide</h2>
+
+<h3>10.1 Option A: VPS / Cloud Server (Recommended)</h3>
+<ol>
+  <li>Provision a server (e.g., DigitalOcean, AWS EC2, or Azure VM)</li>
+  <li>Install Node.js on the server</li>
+  <li>Upload all project files to the server</li>
+  <li>Run <code>npm install</code> to install dependencies</li>
+  <li>Use PM2 to keep the server running: <code>npm install -g pm2 &amp;&amp; pm2 start server.js</code></li>
+  <li>Configure Nginx as a reverse proxy to forward port 80/443 to port 4000</li>
+  <li>Set up SSL certificate using Let's Encrypt for HTTPS</li>
+  <li>Point your domain (e.g., thrivecoretech.com) to the server IP</li>
+</ol>
+
+<h3>10.2 Option B: Static Hosting + Separate Backend</h3>
+<ol>
+  <li>Deploy the HTML/CSS/JS files to a static host (Netlify, Vercel, GitHub Pages)</li>
+  <li>Deploy the Node.js backend to a service like Render, Railway, or Heroku</li>
+  <li>Update the API URL in main.js to point to the backend URL</li>
+</ol>
+
+<h3>10.3 Pre-Deployment Checklist</h3>
+<ul>
+  <li>Add authentication to admin dashboard and API endpoints</li>
+  <li>Update contact email and phone number to real values</li>
+  <li>Replace placeholder social media links with actual URLs</li>
+  <li>Add real team member names and photos to the About page</li>
+  <li>Configure environment variables for production port</li>
+  <li>Set up database backups for submissions.db</li>
+  <li>Add rate limiting to the contact API to prevent spam</li>
+  <li>Test all pages on multiple devices and browsers</li>
+</ul>
+
+<!-- ============ 11. MAINTENANCE ============ -->
+<h2>11. Maintenance &amp; Updates</h2>
+
+<h3>11.1 Adding a New Product</h3>
+<p>To add a new product to the website, update the following files:</p>
+<ol>
+  <li><strong>products.html</strong> &mdash; Add a nav item in the product navigation bar and a full product section with mockup</li>
+  <li><strong>index.html</strong> &mdash; Add a product card in the products grid section</li>
+  <li><strong>All 5 HTML files</strong> &mdash; Add the product to the footer products list</li>
+  <li><strong>about.html</strong> &mdash; Update the "Software Products" counter data-target value</li>
+</ol>
+
+<h3>11.2 Updating Company Information</h3>
+<ul>
+  <li><strong>Address/Location</strong> &mdash; Search for "Abuja" across all HTML files and update as needed</li>
+  <li><strong>Phone/Email</strong> &mdash; Search for "info@thrivecoretech.com" and "+234 123 456 7890"</li>
+  <li><strong>Copyright Year</strong> &mdash; Search for "&copy; 2026" in all footer sections</li>
+</ul>
+
+<h3>11.3 Changing Colours</h3>
+<p>All colours are defined as CSS custom properties in the <code>:root</code> selector at the top of <code>css/styles.css</code>. Modify the variables there and they will cascade throughout the entire site.</p>
+
+<h3>11.4 Backing Up the Database</h3>
+<p>The SQLite database is a single file located at <code>data/submissions.db</code>. To back up, simply copy this file to a secure location. This can be automated with a scheduled task or cron job.</p>
+
+<hr>
+
+<p class="footer-text">ThriveCore Technologies Nigeria Limited &bull; Website Documentation v1.0 &bull; March 2026<br>This document was prepared as part of the website development project.</p>
+
+</body>
+</html>

@@ -11,8 +11,17 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Serve static files (HTML, CSS, JS)
-app.use(express.static(path.join(__dirname)));
+// Redirect .html URLs to clean URLs
+app.use((req, res, next) => {
+  if (req.path.endsWith('.html')) {
+    const clean = req.path.slice(0, -5);
+    return res.redirect(301, clean || '/');
+  }
+  next();
+});
+
+// Serve static files (CSS, JS, images, etc.)
+app.use(express.static(path.join(__dirname), { extensions: false }));
 
 // ===== DATABASE SETUP =====
 const db = new Database(path.join(__dirname, 'data', 'submissions.db'));
@@ -153,9 +162,12 @@ app.get('/api/stats', (req, res) => {
   }
 });
 
-// Serve admin dashboard
-app.get('/admin', (req, res) => {
-  res.sendFile(path.join(__dirname, 'admin.html'));
+// Serve pages with clean URLs (no .html extension)
+const pages = ['about', 'services', 'products', 'contact', 'admin'];
+pages.forEach(page => {
+  app.get(`/${page}`, (req, res) => {
+    res.sendFile(path.join(__dirname, `${page}.html`));
+  });
 });
 
 // ===== START SERVER =====
