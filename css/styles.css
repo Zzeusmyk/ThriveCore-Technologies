@@ -1899,6 +1899,85 @@ p {
     margin: 0 auto;
   }
 
+  /* Page hero mobile padding */
+  .page-hero {
+    padding: 120px 0 60px;
+    margin-top: 80px;
+  }
+
+  /* Reduce section side margins on mobile */
+  .section,
+  .cta-section,
+  .clients-section,
+  .stats-bar,
+  .map-section,
+  .footer {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+
+  .hero {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+
+  .page-hero {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+
+  /* Section header spacing */
+  .section-header {
+    margin-bottom: 40px;
+  }
+
+  /* Grids - prevent overflow on phones */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact form padding */
+  .contact-form-wrapper {
+    padding: 28px 20px;
+  }
+
+  /* Map section height */
+  .map-section {
+    height: 260px;
+    font-size: 0.95rem;
+  }
+
+  /* Client logos */
+  .clients-logos {
+    gap: 20px;
+  }
+
+  .client-logo {
+    font-size: 0.88rem;
+    padding: 8px 14px;
+  }
+
+  /* Hero card */
+  .hero-card {
+    padding: 24px;
+  }
+
   .form-row {
     grid-template-columns: 1fr;
   }
@@ -1922,8 +2001,25 @@ p {
     grid-template-columns: 1fr;
   }
 
-  .testimonials-grid {
-    grid-template-columns: 1fr;
+  /* CTA section padding */
+  .cta-section {
+    padding: 60px 0;
+  }
+
+  /* Stats items */
+  .stats-item .number {
+    font-size: 2.2rem;
+  }
+
+  /* Stat number in hero */
+  .stat-number {
+    font-size: 1.8rem;
+  }
+
+  /* Footer bottom stack on mobile */
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
   }
 
 }
@@ -1947,11 +2043,110 @@ p {
     justify-content: center;
   }
 
+  .cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cta-buttons .btn {
+    justify-content: center;
+  }
+
   .contact-form-wrapper {
-    padding: 24px;
+    padding: 20px 16px;
   }
 
   .hero-card::before {
     display: none;
+  }
+
+  /* Page hero further reduce */
+  .page-hero {
+    padding: 100px 0 48px;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(1.6rem, 6vw, 2.4rem);
+  }
+
+  .page-hero p {
+    font-size: 1rem;
+  }
+
+  /* Container tighter padding */
+  .container {
+    padding: 0 16px;
+  }
+
+  /* Section side margins minimal */
+  .section,
+  .cta-section,
+  .clients-section,
+  .stats-bar,
+  .map-section,
+  .footer,
+  .hero,
+  .page-hero {
+    margin-left: 4px;
+    margin-right: 4px;
+    border-radius: var(--radius-xl);
+  }
+
+  /* Service card less padding */
+  .service-card {
+    padding: 24px;
+  }
+
+  /* Product card less padding */
+  .product-card {
+    padding: 24px;
+  }
+
+  /* Feature item less padding */
+  .feature-item {
+    padding: 28px 20px;
+  }
+
+  /* Team photo height */
+  .team-photo {
+    height: 200px;
+  }
+
+  /* Footer padding */
+  .footer {
+    padding-top: 48px;
+  }
+
+  .footer-col h4 {
+    margin-bottom: 14px;
+  }
+
+  /* Testimonial card */
+  .testimonial-card {
+    padding: 24px;
+  }
+
+  /* Timeline content */
+  .timeline-content {
+    padding: 18px 20px;
+  }
+
+  /* Office card */
+  .office-card {
+    padding: 24px;
+  }
+
+  /* Map section */
+  .map-section {
+    height: 200px;
+  }
+
+  /* Stats item */
+  .stats-item {
+    padding: 20px 16px;
+  }
+
+  .stats-item .number {
+    font-size: 1.8rem;
   }
 }

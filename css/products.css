@@ -574,11 +574,19 @@
 
 @media (max-width: 768px) {
   .products-hero {
-    padding: 140px 0 80px;
+    padding: 120px 0 60px;
+    margin-left: 6px;
+    margin-right: 6px;
   }
 
   .product-section {
     padding: 60px 0;
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+
+  .product-nav-bar {
+    top: 68px;
   }
 
   .product-nav-scroll {
@@ -591,7 +599,7 @@
   }
 
   .mockup-body {
-    min-height: 220px;
+    min-height: 200px;
   }
 
   .mockup-sidebar {
@@ -604,12 +612,43 @@
     height: 28px;
   }
 
+  .mockup-toolbar {
+    padding: 10px 14px;
+  }
+
+  .mockup-content {
+    padding: 12px;
+    gap: 10px;
+  }
+
   .why-products-grid {
     grid-template-columns: 1fr;
+  }
+
+  .why-product-card {
+    padding: 24px;
   }
 }
 
 @media (max-width: 480px) {
+  .products-hero {
+    padding: 100px 0 48px;
+    margin-left: 4px;
+    margin-right: 4px;
+    border-radius: var(--radius-xl);
+  }
+
+  .products-hero-content p {
+    font-size: 1rem;
+  }
+
+  .product-section {
+    padding: 48px 0;
+    margin-left: 4px;
+    margin-right: 4px;
+    border-radius: var(--radius-xl);
+  }
+
   .product-features-grid {
     flex-direction: column;
     align-items: stretch;
@@ -626,5 +665,48 @@
 
   .product-actions .btn {
     justify-content: center;
+  }
+
+  .product-nav-item {
+    padding: 6px 12px;
+    font-size: 0.78rem;
+  }
+
+  .mockup-body {
+    min-height: 160px;
+  }
+
+  .mockup-sidebar {
+    width: 36px;
+    padding: 10px 4px;
+  }
+
+  .mockup-menu-item {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+  }
+
+  .mockup-stat-card {
+    height: 36px;
+  }
+
+  .mockup-pos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .mockup-course-card {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .mockup-course-thumb {
+    width: 44px;
+    height: 44px;
+  }
+
+  .product-tag {
+    font-size: 0.72rem;
+    padding: 5px 12px;
   }
 }
