@@ -213,6 +213,33 @@
   z-index: 5;
 }
 
+/* Coming Soon variant — muted, signals not-yet-available */
+.product-badge-flag.product-badge-soon {
+  background: rgba(15, 35, 65, 0.82);
+  color: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 8px 24px rgba(15, 35, 65, 0.18);
+  backdrop-filter: blur(2px);
+}
+
+/* Dim the placeholder mockups for upcoming products */
+#thriveSpa .product-mockup,
+#thriveERP .product-mockup,
+#thriveHR .product-mockup,
+#thrivePOS .product-mockup,
+#thriveLearn .product-mockup,
+#thriveFinance .product-mockup,
+#thriveHealth .product-mockup,
+#thriveRetail .product-mockup,
+#thriveLaundry .product-mockup {
+  opacity: 0.78;
+}
+
+/* Coming Soon group divider */
+.coming-soon-divider {
+  padding-top: 56px;
+  padding-bottom: 8px;
+}
+
 .product-mockup {
   background: var(--white);
   border-radius: var(--radius-xl);

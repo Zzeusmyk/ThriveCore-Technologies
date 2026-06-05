@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Runtime data / database
+data/*.db
+data/*.db-shm
+data/*.db-wal
+
+# Office temp lock files
+~$*
+
+# OS files
+.DS_Store
+Thumbs.db
